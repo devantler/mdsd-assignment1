@@ -2,7 +2,7 @@ package main.metamodel.operations;
 
 public class SetOperation extends Operation {
 
-    private Integer value;
+    private final Integer value;
 
     public SetOperation(String name, Integer value) {
         super(name);
@@ -11,9 +11,5 @@ public class SetOperation extends Operation {
 
     public Integer getValue() {
         return value;
-    }
-
-    public void setValue(Integer value) {
-        this.value = value;
     }
 }

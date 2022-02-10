@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Machine {
-	private List<State> states = new ArrayList<>();
-	private Map<String, Integer> integers = new HashMap<>();
+	private final List<State> states = new ArrayList<>();
+	private final Map<String, Integer> integers = new HashMap<>();
 	private State currentState;
 
 	public List<State> getStates() {

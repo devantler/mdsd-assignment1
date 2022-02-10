@@ -11,7 +11,7 @@ import main.metamodel.operations.SetOperation;
 
 public class Transition {
 
-	private Object event;
+	private final Object event;
 	private State target;
 	private Operation operation;
 	private Condition condition;
@@ -33,24 +33,15 @@ public class Transition {
 	}
 
 	public boolean hasSetOperation() {
-		if (operation instanceof SetOperation) {
-			return true;
-		}
-		return false;
+		return operation instanceof SetOperation;
 	}
 
 	public boolean hasIncrementOperation() {
-		if (operation instanceof IncrementOperation) {
-			return true;
-		}
-		return false;
+		return operation instanceof IncrementOperation;
 	}
 
 	public boolean hasDecrementOperation() {
-		if (operation instanceof DecrementOperation) {
-			return true;
-		}
-		return false;
+		return operation instanceof DecrementOperation;
 	}
 
 	public Object getOperationVariableName() {
@@ -70,24 +61,15 @@ public class Transition {
 	}
 
 	public boolean isConditionEqual() {
-		if (condition instanceof IfEqualsCondition) {
-			return true;
-		}
-		return false;
+		return condition instanceof IfEqualsCondition;
 	}
 
 	public boolean isConditionGreaterThan() {
-		if (condition instanceof IfGreaterThanCondition) {
-			return true;
-		}
-		return false;
+		return condition instanceof IfGreaterThanCondition;
 	}
 
 	public boolean isConditionLessThan() {
-		if (condition instanceof IfLessThanCondition) {
-			return true;
-		}
-		return false;
+		return condition instanceof IfLessThanCondition;
 	}
 
 	public boolean hasOperation() {

@@ -1,11 +1,11 @@
 package main;
 
-import java.util.ArrayList;
-
 import main.metamodel.Machine;
 import main.metamodel.State;
 import main.metamodel.Transition;
 import main.metamodel.operations.SetOperation;
+
+import java.util.Objects;
 
 public class MachineInterpreter {
 	Machine machine;
@@ -27,7 +27,7 @@ public class MachineInterpreter {
 					var currentValue = integers.get(variableName);
 					var valueToCompareTO = transition.getConditionComparedValue();
 					if (transition.isConditionEqual()) {
-						if (currentValue != valueToCompareTO) {
+						if (!Objects.equals(currentValue, valueToCompareTO)) {
 							continue;
 						}
 					} else if (transition.isConditionGreaterThan()) {
@@ -61,5 +61,4 @@ public class MachineInterpreter {
 	public int getInteger(String string) {
 		return machine.getIntegers().get(string);
 	}
-
 }

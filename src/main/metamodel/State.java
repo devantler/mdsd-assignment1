@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class State {
-	private String name;
-    private List<Transition> transitions = new ArrayList<>();
+	private final String name;
+    private final List<Transition> transitions = new ArrayList<>();
 
 	public State(String name) {
 		this.name = name;
