@@ -11,6 +11,12 @@
 		"java.project.outputPath": "bin",
 		"java.project.referencedLibraries": [
 			"lib/**/*.jar"
-		]
+		],
+		"cSpell.words": [
+			"MDSD"
+		],
+		"markdownlint.config": {
+			"MD041": false
+		}
 	}
 }
